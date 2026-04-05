@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-saira: "Saira Condensed", sans-serif;
+  --font-lexend: "Lexend", sans-serif;
+
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-bg: var(--bg-main);
+  --color-accent: var(--accent);
+}
+
+:root {
+  font-family: "Lexend", system-ui, apple-system, sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+
+  color-scheme: dark;
+  --text: oklch(98.956% 0.00216 200);
+  --text-muted: oklch(63.676% 0.00007 271.152);
+  --bg-main: oklch(0% 0 0);
+  --accent: oklch(58.715% 0.23714 27.788);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:hover {
+  color: var(--text);
+}
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+h3 {
+  @apply text-2xl;
+}
+h4 {
+  @apply text-xl;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+p,span,a {
+  font-size: 19px;
+}
+
+.image-bottom-shadow {
+  mask: linear-gradient(
+    to bottom, var(--bg-main) 40%, transparent
+  )
+}
+.character-bottom-shadow {
+  mask: linear-gradient(
+    to bottom, var(--bg-main) 95%, transparent
+  )
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-progress {
+  animation: progress 10s linear forwards;
+}
